@@ -41,6 +41,7 @@ import org.apache.rocketmq.srvutil.ServerUtil;
 import org.apache.rocketmq.srvutil.ShutdownHookThread;
 import org.slf4j.LoggerFactory;
 
+//TODO zhangzehao namesrv启动类
 public class NamesrvStartup {
 
     private static InternalLogger log;
@@ -80,6 +81,8 @@ public class NamesrvStartup {
         }
 
         final NamesrvConfig namesrvConfig = new NamesrvConfig();
+        //TODO zhangzehao 设置rocketmqhome
+        namesrvConfig.setRocketmqHome("D:\\work\\git\\rocketmq\\distribution");
         final NettyServerConfig nettyServerConfig = new NettyServerConfig();
         nettyServerConfig.setListenPort(9876);
         if (commandLine.hasOption('c')) {
