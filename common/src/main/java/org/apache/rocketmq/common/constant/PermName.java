@@ -50,4 +50,8 @@ public class PermName {
     public static boolean isInherited(final int perm) {
         return (perm & PERM_INHERIT) == PERM_INHERIT;
     }
+
+    public static void main(String[] args){
+        System.out.println(perm2String(6));
+    }
 }
